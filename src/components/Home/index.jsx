@@ -1,11 +1,13 @@
 import React from 'react'
+import Header from '../Header';
+import Container from '../Layout/Container';
 import classes from './Home.module.scss';
 
 const Home = () => {
   return (
-    <div>
-        <p className={classes['root']}>Home</p>
-    </div>
+    <Container>
+        <Header/>
+    </Container>
   )
 }
 

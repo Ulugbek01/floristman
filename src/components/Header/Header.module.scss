@@ -1,0 +1,27 @@
+@import '../../theme.scss';
+
+.header {
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    &__container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        width: 175px;
+        height: 51px;
+    }
+
+    &__bag {
+        margin-right: 16px;
+    }
+
+    &__bag, &__heart {
+        width: 20px;
+        height: 20px;
+        color: $green;
+    }
+}
