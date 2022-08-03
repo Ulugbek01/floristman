@@ -6,8 +6,6 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Container from '../Layout/Container';
 import classes from './Header.module.scss';
 import logo from '../../assets/images/logo.png';
-import heart from '../../assets/icons/heart.svg';
-import shopping_bag from '../../assets/icons/shopping-bag.svg';
 
 const Header = () => {
   return (
