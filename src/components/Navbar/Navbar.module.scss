@@ -1,0 +1,14 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 910px;
+    margin: 0 auto;
+    padding: 14px 0;
+    background: linear-gradient(180deg, #55B74C 0%, #4BA043 162.75%);
+    border-radius: 7px;
+
+    a {
+        color: #fff;
+    }
+}

@@ -71,6 +71,22 @@ body {
     font-family: 'Manrope', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.to-center {
+    text-align: center;
+}
+
+.to-uppercase {
+    text-transform: uppercase;
+}
+
 :root {
     $title_color:#24323F; 
 }
