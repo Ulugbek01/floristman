@@ -7,12 +7,12 @@
 
     &__content {
         display: flex;
-        justify-content: center;
-        flex-direction: column;
+       flex-direction: column;
+       justify-content: center;
         height: 100%;
         padding: 50px;
         border: 2px solid transparent;
-        border-image: linear-gradient(to top, #8B8B8B, transparent, #8B8B8B);
+        border-image: linear-gradient(to top, #8B8B8B, transparent 40%, 80%, #8B8B8B);
         border-image-slice: 1;
     }
 

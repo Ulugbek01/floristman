@@ -8,7 +8,23 @@
     background: linear-gradient(180deg, #55B74C 0%, #4BA043 162.75%);
     border-radius: 7px;
 
-    a {
+    &__link {
         color: #fff;
+    }
+
+    &__link::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        margin-top: 2px;
+        transform: scale(0);
+        transition: 0.37s transform ease-in;
+        transform-origin: left;
+    }
+
+    &__link:hover::after {
+        transform: scale(1);
     }
 }

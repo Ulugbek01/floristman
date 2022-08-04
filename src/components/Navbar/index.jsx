@@ -9,7 +9,7 @@ const Navbar = () => {
     <Container>
       <nav className={classes['navbar']}>
         {navbar.map((item) => 
-          <NavLink key={item.id} to={item.path}>{item.title}</NavLink>
+          <NavLink className={classes['navbar__link']} key={item.id} to={item.path}>{item.title}</NavLink>
           )}
       </nav>
     </Container>
