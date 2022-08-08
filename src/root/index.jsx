@@ -1,9 +1,11 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Header from '../components/Header'
+import Home from '../components/Home'
+import Badge from '../components/Home/Badge'
 import Container from '../components/Layout/Container'
 import Navbar from '../components/Navbar'
-import { navbar } from '../utils/navbar'
+import Product from '../components/Product'
 
 const Root = () => {
   return (
@@ -11,9 +13,10 @@ const Root = () => {
         <Header/>
         <Navbar/>
         <Routes>
-            {navbar.map((item) => 
-                <Route key={item.id} path={item.path} element={item.Element}/>
-            )}
+          <Route path='/' element={<Home/>} />
+          <Route path='/home' element={<Home/>}/>
+          <Route path='/product' element={<Product/>}/>
+          <Route path='/category/:type' element={<Badge/>} />
         </Routes>
     </Container>
   )
