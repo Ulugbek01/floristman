@@ -5,11 +5,10 @@ import Container from '../../Layout/Container';
 import classes from './Category.module.scss';
 
 const Category = () => {
-
   const navigate = useNavigate();
-
   return (
     <Container>
+      <h3>{}</h3>
       <div className={classes['category']}>
         {categories.map((category) => 
           <div key={category.id} className={classes['category__card']}>

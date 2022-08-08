@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useQuery } from 'react-query';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import Container from '../../Layout/Container'
 import classes from './Badge.module.scss';
 import Card from './Card';
@@ -8,6 +8,7 @@ import Card from './Card';
 const Badge = () => {
   const { type } = useParams();
   const [data, setData] = useState([]);
+  const { pathname } = useLocation();
 
   useQuery([type], async () => {
     const res = await fetch(`http://localhost:4000/products?category=${type}`);
@@ -19,14 +20,14 @@ const Badge = () => {
     } 
   )
 
-
-  console.log(data);
-
    return (
-    <Container className={classes['badge']}>
+    <Container>
+      <h3 className={classes['title']}>{pathname.slice(10).charAt(0).toUpperCase() + pathname.slice(11)}</h3>
+      <div className={classes['badge']}>
         {data.map((item) => 
             <Card className={classes['badge__card']} key={item.id} item={item}/>
         )}
+      </div>
     </Container>
   )
 }

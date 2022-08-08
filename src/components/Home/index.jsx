@@ -3,6 +3,7 @@ import Container from '../Layout/Container';
 import Badge from './Badge';
 import Category from './Category';
 import Hero from './Hero';
+import SpecialDiscount from './SpecialDiscount';
 import classes from './Home.module.scss';
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
         <Hero/>
         <Category/>
         <Badge/>
+        <SpecialDiscount/>
     </Container>
   )
 }
