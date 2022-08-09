@@ -1,10 +1,10 @@
 import React from 'react'
 import classes from './Card.module.scss';
 
-const Card = ({item}) => {
+const Card = ({item, onClick}) => {
   return (
       <div className={classes['card']}>
-        <div className={classes['card__img']}>
+        <div className={classes['card__img']} onClick={onClick}>
           <img src={item?.images[0]} alt="card-img" width={278} height={303} />
         </div>
           <p className={classes['card__title']}>{item?.name}</p>

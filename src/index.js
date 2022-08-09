@@ -6,12 +6,12 @@ import './index.scss';
 import Root from './root';
 
 
-const query = new QueryClient();
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <QueryClientProvider client={query}>
+    <QueryClientProvider client={queryClient}>
       <Router>
         <Root/>
       </Router>
