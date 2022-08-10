@@ -12,7 +12,8 @@
         color: #fff;
     }
 
-    &__link::after {
+    &__link::after, 
+    &__active-true::after {
         content: '';
         display: block;
         width: 100%;
@@ -25,6 +26,10 @@
     }
 
     &__link:hover::after {
+        transform: scale(1);
+    }
+
+    &__active-true::after {
         transform: scale(1);
     }
 }

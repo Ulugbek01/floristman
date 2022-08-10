@@ -1,15 +1,15 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Home from '../components/Home'
 import Badge from '../components/Home/Badge'
-import Container from '../components/Layout/Container'
 import Navbar from '../components/Navbar'
 import Product from '../components/Product'
 
 const Root = () => {
   return (
-    <Container>
+    <div>
         <Header/>
         <Navbar/>
         <Routes>
@@ -19,7 +19,8 @@ const Root = () => {
           <Route path='/category/:type' element={<Badge/>} />
           <Route path='/products/:id' element={<Product/>} />
         </Routes>
-    </Container>
+        <Footer/>
+    </div>
   )
 }
 

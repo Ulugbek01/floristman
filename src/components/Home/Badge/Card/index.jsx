@@ -1,7 +1,16 @@
-import React from 'react'
+import classNames from 'classnames';
+import React, { useState } from 'react'
 import classes from './Card.module.scss';
 
 const Card = ({item, onClick}) => {
+  
+  const [selected, setSelected] = useState(false);
+
+  const onSelect = ()=> {
+    setSelected(!selected)
+  }
+  // console.log(selected);
+
   return (
       <div className={classes['card']}>
         <div className={classes['card__img']} onClick={onClick}>
@@ -12,7 +21,7 @@ const Card = ({item, onClick}) => {
           <p className={classes['card__discount-price']}>{item?.price} USD</p>
           <p className={classes['card__original-price']}>{item?.discount} USD</p>
         </div>
-        <button className={classes['card__btn']}>Add To Cart</button>
+        <button className={classNames(classes['card__btn'], classes[`card__btn-${selected}`])} onClick={onSelect}>Add To Cart</button>
     </div>
   )
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import Container from '../Layout/Container';
 import Badge from './Badge';
 import Category from './Category';
 import Hero from './Hero';
@@ -8,12 +7,12 @@ import classes from './Home.module.scss';
 
 const Home = () => {
   return (
-    <Container>
+    <div>
         <Hero/>
         <Category/>
         <Badge/>
         <SpecialDiscount/>
-    </Container>
+    </div>
   )
 }
 
