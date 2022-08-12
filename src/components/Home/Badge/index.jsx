@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useQuery } from 'react-query';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Container from '../../Layout/Container'
@@ -11,16 +11,26 @@ const Badge = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
-  useQuery([type], async () => {
-    const res = await fetch(`http://localhost:4000/products?category=${type}`);
-    return await res.json();},
-    {
-      onSuccess: (res) => {
-        setData(res);
-      }
-    } 
-  )
+  // useQuery([type], async () => {
+  //   const res = await fetch(`http://localhost:4000/products?category=${type}`);
+  //   return await res.json();},
+  //   {
+  //     onSuccess: (res) => {
+  //       setData(res);
+  //     }
+  //   } 
+  // )
 
+  const fetchData = async () => {
+    const res = await fetch(`http://localhost:4000/products?category=${type}`);
+    const cards = await res.json();
+    setData(cards);
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, [type])
+ 
    return (
     <Container>
       <h3 className={classes['title']}>{pathname.slice(10).charAt(0).toUpperCase() + pathname.slice(11)}</h3>
