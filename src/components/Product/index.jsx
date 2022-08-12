@@ -14,6 +14,7 @@ const Product = () => {
       const res = await fetch(`http://localhost:4000/products?id=${id}`);
       return await res.json();
     })
+    
   return (
     <Container className={classes['container']}>
       {/* {data[0]?.name} */}
