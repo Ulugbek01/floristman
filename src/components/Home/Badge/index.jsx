@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useQuery } from 'react-query';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Container from '../../Layout/Container'
 import classes from './Badge.module.scss';
