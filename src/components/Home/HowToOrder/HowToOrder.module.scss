@@ -1,0 +1,35 @@
+.title {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.cards__wrapper {
+    display: flex;
+    text-align: center;
+
+    & > div {
+        flex-basis: 25%;
+    }
+
+    & > div:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &-title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+
+    &-desc {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+    }
+}

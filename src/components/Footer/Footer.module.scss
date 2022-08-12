@@ -1,8 +1,32 @@
 .footer {
     background-color: #2B2B2B;
     padding: 20px 0;
+    margin-top: 40px;
 
     &__logo {
         cursor: pointer;
+    }
+
+    .footer__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .tel {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 33px;
+        color: #55B74C;
+    }
+
+    .footer__bottom {
+        font-size: 14px;
+        line-height: 16px;
+        color: #A7A7A7;
+        text-align: center;
+        margin-top: 18px;
     }
 }
