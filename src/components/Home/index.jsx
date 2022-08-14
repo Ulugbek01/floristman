@@ -4,7 +4,6 @@ import Category from './Category';
 import Hero from './Hero';
 import SpecialDiscount from './SpecialDiscount';
 import OrderBasket from './OrderBasket';
-import classes from './Home.module.scss';
 import HowToOrder from './HowToOrder';
 
 const Home = () => {

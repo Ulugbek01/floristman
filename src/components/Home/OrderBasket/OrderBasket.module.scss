@@ -13,14 +13,13 @@
     
     .order__basket {
         display: flex;
-        // align-items: center;
         justify-content: space-between;
         border: 1px solid #55B74C;
         border-radius: 8px;
         padding: 45px;
 
-        & > div{
-            width: 50%;
+        & > div:first-child{
+            width: 70%;
         }
 
         .input, .textarea {
@@ -37,6 +36,7 @@
             font-size: 18px;
             line-height: 27px;
             color: #898989;
+            resize: none;
         }
 
         .send-btn {
@@ -56,14 +56,13 @@
         }
 
         .order-basket-image {
+            width: 390px;
             margin-left: 30px;
-            max-height: 520px;
-            overflow: hidden;
             border-radius: 7px;
 
             .img {
                 width: 100%;
-                height: auto;
+                height: 100%;
             }
         }
     }

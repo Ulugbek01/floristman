@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Container from '../../Layout/Container'
+import SpecialDiscount from '../SpecialDiscount';
 import classes from './Badge.module.scss';
 import Card from './Card';
 
@@ -38,6 +39,8 @@ const Badge = () => {
             <Card onClick={() => navigate(`/products/${item.id}`)} className={classes['badge__card']} key={item.id} item={item}/>
         )}
       </div>
+
+      {pathname === `/category/${type}` ? <SpecialDiscount/> : ''}
     </Container>
   )
 }
